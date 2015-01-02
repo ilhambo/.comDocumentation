@@ -1,4 +1,1 @@
-.comDocs
-========
-
-Documentation for .com (Umbraco as a Service)
+#Umbraco .com Documentation========Documentation for .com (Umbraco as a Service).  How to get started, how to set up your Umbraco .com project for development, how to successfully deploy, and how to troubleshoot issues##[Getting Started](GetStarted/index.md)If you're new to .com then start here.  All about what .com is and how you can use it to get your work done more efficiently - and have more fun.##[Set up Project](SetUp/index.md)How to set up a project for development.  Using just .com, by cloning locally, and working with a team.##[Deployment](Deployment/index.md)The deployment process explained with best practices and a little Git mixed in.##[Troubleshooting](Troubleshooting/index.md)Tips on finding and resolving issues.
