@@ -7,6 +7,8 @@ Since umbraco.com _is_ Umbraco we thought we'd stick with a name that describes 
 ## Projects and Sites
 In umbraco.com we organize your work into projects which are made of sites, teams, settings, and other related resources like databases and file storage.  In a Trial project you have just one site with a team of one.  But with an Agency project you have three sites (development, staging, live), a team of many, and other items.  But always you start with a project and then, depending on what you want to do, you'll use a site from that project.
 
+![environment](images/environment.png)
+
 For developers, you will use the development site to create and test your code.  You may even clone the development site to your local machine to work there and then, once things are just how you like, push you changes to the development site.  See more about this in the [deployment section](/deployment/index.md).
 
 For content editors, you will either use the staging site or the live site to create and edit your content.  There is a case to be made for both of these, read on to find out why you may or may not want to author content in your staging environment.
