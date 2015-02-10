@@ -31,4 +31,8 @@ Your Trial umbraco.com project already has a website set up for you, we call thi
 ##Making changes to your site
 This is where you get to make your Umbraco site your own.  Umbraco is built using web standards - things like Html, css, and JavaScript.  You’ll find the Html that makes up the Templates for your site in the Settings section, under the Templates tree.  This is plain-old-html, so feel free to change or replace what’s there.  The same goes for your site’s Css (it’s in the Stylesheets tree) and the JavaScript (yup, in the Scripts tree).  
  
+<<<<<<< HEAD
  ![Alt text](/images/dashboard.jpg "Optional title")
+=======
+ ![Alt text](/images/dashboard.jpg "Optional title")
+>>>>>>> bf2835bdc5182ff40f3b6cf995c5bd35fe2f24c7
