@@ -1,3 +1,5 @@
+**NOTE:  This document is a work in progress and may not reflect the latest Portal**
+
 #Working with a local clone of an umbraco.com site
 From the umbraco.com portal [www.umbraco.io](www.umbraco.io) copy your dev site’s **HTTPS Clone Url** and then clone the site using your favorite Git client.  We like [SourceTree](http://www.sourcetreeapp.com/) or [Git Extensions](http://code.google.com/p/gitextensions/).  We'll use SourceTree in this example.  Here are the steps to clone your site:
 
