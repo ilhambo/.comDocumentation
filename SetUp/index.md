@@ -30,7 +30,7 @@ As with all things security related, make sure you use this feature judiciously 
 ##Timezones
 From your profile settings you can set your timezone.  This applies to the disply of status messages in the umbraco.io portal and makes it easier to determine the actual time a particular status was created.
 
-![timezones](images/timezones.png)
+![timezones](images/timezones.PNG)
 
 ##Experimental Features
 You can enable the availability of experimental features for your projects.  This includes features that may not be functionaly complete and are not supported by Umbraco HQ.  We recommend enabling this only if you fully understand the feature you will be using or are strictly using the project as a test.
