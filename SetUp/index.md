@@ -5,6 +5,12 @@ Most of the set up can be accomplished by using the options from your project's 
 
 ![settings](images/settings.PNG)
 
+##Other Set Up Topics
+[Working with your site locally](working-local.md)
+[Working with Visual Studio](visualstudio.md)
+[Additional media topics](media.md)
+
+
 ##Naming a Project
 This is a very personal choice of course.  If you didn't manage to get just the right name the first time, you can always rename your project using the Settings > Rename project option. Heed the warnings before you do this.  
 
