@@ -12,7 +12,7 @@ In Visual Studio create a new project, selecting the Empty Web Application optio
 ![visualstudio](images/filenewproject.PNG)
 
 ##Add Your site files
-If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](/Deployments/working-local.md) for details on how to do this if you haven't alredy.
+If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](/Deployment/working-local.md) for details on how to do this if you haven't alredy.
 
 - Copy all of your site files and folders into the project folder you just created. 
 - Include the /.git folder
@@ -34,4 +34,4 @@ Make sure you then commit your updated .gitignore file to your local umbraco.io 
 ##Getting Ready to deploy your updates
 Now that you've added your own touch to your site, and thoroughly tested of course, you're ready to deploy to your umbraco.io development site.  The key thing to remember is that you'll commit anything that is required by your site to the local git repository and will not commit source or project files.  That means you'll add .dll files to the repository, which is typically something you wouldn't do with a source code repository.
 
-Once you have everything your site will need commited you can follow the [deployment workflow](/Deployments/index.md) to complete the deployment.
+Once you have everything your site will need commited you can follow the [deployment workflow](/Deployment/index.md) to complete the deployment.
