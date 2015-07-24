@@ -6,9 +6,9 @@ Most of the set up can be accomplished by using the options from your project's 
 ![settings](images/settings.PNG)
 
 ##Other Set Up Topics
-[Working with your site locally](working-local.md)
-[Working with Visual Studio](visualstudio.md)
-[Additional media topics](media.md)
+- [Working with your site locally](working-local.md)
+- [Working with Visual Studio](visualstudio.md)
+- [Additional media topics](media.md)
 
 
 ##Naming a Project
