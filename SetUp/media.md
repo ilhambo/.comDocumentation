@@ -3,8 +3,8 @@ We'll cover the optional use of Azure Blob Storage for your media and why you ma
 
 [More information](https://our.umbraco.org/projects/backoffice-extensions/azure-blob-storage-provider) 	
 
-##Media and Git, not too much love
-Git is really good at handling many versions of text-based content,  I.e. code, markdown, etc....  What git is not as good at is handling binary content, especially many versions of a particular binary file or a large binary file.  The fact that umbraco.com uses git as the file system (as do other Azure solutions) introduces a potential issue.  In addition, as umbraco.com deployments are done using a web connection, large media deployments could be slow and are subject to timeouts and other restrictions.
+##Media and Deployment
+As umbraco.com deployments are done using a web connection, large media deployments can be slow and are subject to timeouts and other restrictions associated with large uploads over a web connection.
 
 If this sounds like you, you should evaluate the Azure Blob Storage provider.  It is relatively simple to setup, has very few limitations and can result in better site performance as well as faster media loading times - especially if your media takes advantage of an Azure, or other, CDN.
 
@@ -20,4 +20,9 @@ At the time this documentation was updated (July 2015) there are a few items to 
 - The CropUp package does not work properly with this provider
 - Copy of document types with an upload field as a property will not work.
 
+##Environment and Deployment considerations
+By default this provider will use a single blob container for the media used by all sites in a project.  So development, staging, a live will all use the same media files.  If this works with your workflow it is the recommended configuration.  If you cannot use the same media accross all sites then you will need to set up a different blob storage container for each site.  Each container will have a unique address and access keys.
 
+A common arrangement for umbraco.com users who use the Azure Blob Storage provider and cannot use the same container for all sites is to create one container for development/stage and one for live.  The specific container settings are then applied to devlopment/stage and to live.  
+
+When umbraco.com deploys media it will use the settings for each environment to create or update the media in the correct container.
