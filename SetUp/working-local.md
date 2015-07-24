@@ -13,7 +13,7 @@ Now you have an exact copy of your umbraco.com dev site locally.
 
 We like to use Microsoft WebMatrix when working locally, but you can use Visual Studio or another development tool or web server of course.  When you run your local site for the first time you’ll be prompted to restore your site's content.  Wait until this process completes as it also creates the local SqlCE database for your site.
 
-![clone dialog](images/Restore.PNG)
+![clone dialog](images/RestoreContent.PNG)
 
 That's it!  Now you can work with your site locally just as with any other umbraco site.  You can create content, add media, even create your own custom code.  When you're ready to deploy your changes make sure to have a look at the [deployments](/Deployment/index.md) documentation.
 
