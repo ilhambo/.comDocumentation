@@ -7,12 +7,12 @@ An important concept in regard to the git repository that is part of your umbrac
 While you will commit all code except compiled dll's to your source code repository you treat the deployment repository differently in that you commit only the compiled dll's and no source code or project files.  Of course, if you don't use compiled code but rather code files in /app_code/ or /app_plugins/ this is the same with both types of repositories.
 
 ##Create a new project
-In Visual Studio create a new project, selecting the Empty MVC4 Web Application option.
+In Visual Studio create a new project, selecting the Empty Web Application option.  If you will be extending Umbraco with your own MVC code (SurfaceControllers, etc.) you can start with the MVC 4 Web Application project type.  Note that you'll need to remove some files if you start with this type of project.
 
 ![visualstudio](images/filenewproject.PNG)
 
 ##Add Your site files
-If you haven't already, clone your development site to your local machine.  
+If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](/Deployments/working-local.md) for details on how to do this if you haven't alredy.
 
 - Copy all of your site files and folders into the project folder you just created. 
 - Include the /.git folder
@@ -32,3 +32,6 @@ You should also exclude any folders that contain only source code.  Folders such
 Make sure you then commit your updated .gitignore file to your local umbraco.io repository.  It is important that you do not deploy any .csproj (or .vbproj, etc.) files to your site.  If you do your site may become unresponsive while the deploy proces attempts to parse the file contents.
 
 ##Getting Ready to deploy your updates
+Now that you've added your own touch to your site, and thoroughly tested of course, you're ready to deploy to your umbraco.io development site.  The key thing to remember is that you'll commit anything that is required by your site to the local git repository and will not commit source or project files.  That means you'll add .dll files to the repository, which is typically something you wouldn't do with a source code repository.
+
+Once you have everything your site will need commited you can follow the [deployment workflow](/Deployments/index.md) to complete the deployment.
