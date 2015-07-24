@@ -54,4 +54,4 @@ From your profile settings you can set your timezone.  This applies to the displ
 You can enable the availability of experimental features for your projects.  This includes features that may not be functionaly complete and are not supported by Umbraco HQ.  We recommend enabling this only if you fully understand the feature you will be using or are strictly using the project as a test.
 
 #Working locally
-For more on how to work with a local clone of your site see the [Working Local documentation.](/Deployment/working-local.md)
+For more on how to work with a local clone of your site see the [Working Local documentation.](working-local.md)

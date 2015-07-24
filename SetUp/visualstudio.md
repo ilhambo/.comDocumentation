@@ -12,7 +12,7 @@ In Visual Studio create a new project, selecting the Empty Web Application optio
 ![visualstudio](images/filenewproject.PNG)
 
 ##Add Your site files
-If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](/Deployment/working-local.md) for details on how to do this if you haven't alredy.
+If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](working-local.md) for details on how to do this if you haven't alredy.
 
 - Copy all of your site files and folders into the project folder you just created. 
 - Include the /.git folder
