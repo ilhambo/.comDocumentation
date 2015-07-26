@@ -23,6 +23,6 @@ At the time this documentation was updated (July 2015) there are a few items to 
 ##Environment and Deployment considerations
 By default this provider will use a single blob container for the media used by all sites in a project.  So development, staging, a live will all use the same media files.  If this works with your workflow it is the recommended configuration.  If you cannot use the same media accross all sites then you will need to set up a different blob storage container for each site.  Each container will have a unique address and access keys.
 
-A common arrangement for umbraco.com users who use the Azure Blob Storage provider and cannot use the same container for all sites is to create one container for development/stage and one for live.  The specific container settings are then applied to devlopment/stage and to live.  
+A common arrangement for umbraco.com users who use the Azure Blob Storage provider and cannot use the same container for all sites is to create one container for development/stage and one for live.  The specific container settings are then applied to development/stage sites and to the live site.  
 
 When umbraco.com deploys media it will use the settings for each environment to create or update the media in the correct container.
