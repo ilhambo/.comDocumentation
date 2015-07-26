@@ -1,5 +1,4 @@
 #Umbraco .com Documentation
-========
 
 Documentation for .com (Umbraco as a Service).  How to get started, how to set up your Umbraco .com project for development, how to successfully deploy, and how to troubleshoot issues
 
