@@ -9,18 +9,18 @@ Prior to undertaking a migrtaion you'll want to make sure you know the packages,
 If you have used Courier with your site previously and deployments work as expected, then you can be relatively certain it will also deploy properly with umbraco.com.
 
 ##Step-by-step
-1 - Make sure your existing site is upgraded to the latest released version of umbraco.
-2 - Verify your site runs without errors.  Hint: check the umbracoTraceLog.txt log file.
--- Ideally your site will run locally using the SqlCe database as this will make content migration easier.  Don't worry if that's not possible, you can still complete the migration.
-3 - With the site running empty the Content and Media Recycle bins.
-4 - Shut down the site and delete the following files and folders:
--- /app_data/TEMP
--- /app_data/logs
--- /app_data/cache
--- /app_data/preview
--- /app_data/umbraco.config
--- /data/[*]
-5 - Create a new umbraco.com project and clone the Dev site to your local machine.
+1. Make sure your existing site is upgraded to the latest released version of umbraco.
+2. Verify your site runs without errors.  Hint: check the umbracoTraceLog.txt log file.
+2.a. Ideally your site will run locally using the SqlCe database as this will make content migration easier.  Don't worry if that's not possible, you can still complete the migration.
+3. With the site running empty the Content and Media Recycle bins.
+4. Shut down the site and delete the following files and folders:
+4.a. /app_data/TEMP
+4.b. /app_data/logs
+4.c. /app_data/cache
+4.d. /app_data/preview
+4.e. /app_data/umbraco.config
+4.f. /data/[*]
+5. Create a new umbraco.com project and clone the Dev site to your local machine.
 6 - Verify the existing site and the cloned umbraco.com site are the same umbraco version
 7 - Copy all folders from the existing site to the umbraco.com site making sure to leave all the files in the /bin/, /umbraco/, /umbraco_client/ folder as the umbraco.com versions.
 8 - Merge the config files as needed paying special attention to web.config and /config/courier.config. 
