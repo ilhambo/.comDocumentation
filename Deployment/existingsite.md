@@ -9,7 +9,7 @@ Prior to undertaking a migrataion you'll want to make sure you know the packages
 If you have used Courier with your site previously and deployments work as expected, then you can be relatively certain it will also deploy properly with umbraco.com.
 
 ##Step-by-step
-1. Make sure your existing site is upgraded to the latest released version of umbraco.
+1. Make sure your existing site is upgraded to the latest released version of umbraco.  You'll also want to make sure the umbraco.com site you create and clone in step 5 is the same version.
 2. Verify your site runs without errors.  
   * Hint: check the umbracoTraceLog.txt log file.
   * Ideally your site will run locally using the SqlCe database as this will make content migration easier.  Don't worry if that's not possible, you can still complete the migration.
@@ -33,11 +33,11 @@ If you have used Courier with your site previously and deployments work as expec
   * If you have a backoffice user that has the exact same name as the user for umbraco.com you will need to change to user name in the database at this time or update the password before deploying via the backoffice.
 10. Open a command prompt at the /data/ folder and add a deploy marker.
   * data> echo > deploy
-11. Now run the umbraco.com site with the updated files and database.  The deploy engine will start when the deploy marker is detected.  This will likely complete relatively quickly.
+11. Now run the local umbraco.com site with the updated files and database.  The deploy engine will start when the deploy marker is detected.  This will likely complete relatively quickly.
 12. Once complete verify your site has all meta data, content, and media as expected.
-13. Delete the folder /data/Revision/ from the file system
+13. Delete the folder /data/Revision/ from the file system.  
 14. In the same browser session as the logged in umbraco user open a new tab at the address:  
-  * http://localhost:<your port>/umbraco/backoffice/api/CourierAdmin/Rebuild
+  * http://localhost:port/umbraco/backoffice/api/CourierAdmin/Rebuild
   * That will create a serialized version of all your site's meta data
 15. At this point you are ready to deploy your site to umbraco.com - yay!
 16. Make sure you git add and commit all the files you added to the site including the serialized files in /data/Revison/ but excluding /media/ .  This should be set correctly by the included .gitignore file.
