@@ -1,17 +1,19 @@
 #Baselines
-A Baseline project is very similar to a Fork (forked repository) on github in that we create a clone of an existing project while maintaining a connection between the two projects. The connection exists between the Live git repository of the existing project (often referred to as the “master”) and the Development git repository of the newly created project - the Baseline “slave”.
+A Baseline project is very similar to a Fork (forked repository) on github in that we create a clone of an existing project while maintaining a connection between the two projects. The connection exists between the Live git repository of the existing project (often referred to as the “master”) and the Development git repository of the newly created project - the Baseline “child”.
+
 Any project based onthe Agency plan can act as the Master for new projects.
 
-The basic idea is that you have a Project that contains all your standard Umbraco packages/components, maybe even configured with some default Document Types, which you want to use as the baseline for future projects. When you need to make changes to your baseline you can then push these changes out to all the “slave” projects with a click of a button.
+The basic idea is that you have a Project that contains all your standard Umbraco packages/components, maybe even configured with some default Document Types, which you want to use as the baseline for future projects. When you need to make changes to your baseline you can then push these changes out to all the “child” projects with a click of a button.
 
 ##High-level Overview
 using the re“Create Project” option form the umbraco.com portal you’ll have the option to create a new project based on an existing project (only Agency plans).  When you click create you’ll be redirected to the project page for the newly created project, which shows the creation progress. The three environments are hidden by default, and won’t be available until the Development environment is ready. The Staging and Live environments will remain dimmed until their Sql Azure databases are ready.
 
 The creation process involves a lot of different parts, which are outlined below. Keep in mind that we are creating a new and empty project, which consists of three environments and that the Development environment will be a clone of the Live repository from the existing project (the Baseline “master”).
 
-When the Project is created the id will be added to an index of Baseline (slave) projects for the master/existing project. This will ensure that the master is aware of its children and can use that list later on, to push updates to all the slaves.
+When the Project is created the id will be added to an index of Baseline (child) projects for the master/existing project. This will ensure that the master is aware of its children and can use that list later on, to push updates to all the children.
 
 ###Steps
+The process of creating a Baseline project is rather involved, but it can be helpful to understand the parts that make up a baseliine master-child relationship:
 * The Development site is created along with a new Sql Azure database
 * The Staging and Live sites are created with Sql Azure credentials, but no database as we’ll make a copy of the Development database when its ready. We’ll use these pre-defined credentials later on.
 * A ConnectionString is configured for each site (umbracoDbDsn)
@@ -33,7 +35,7 @@ When the Project is created the id will be added to an index of Baseline (slave)
 
 Between most of these steps we send updates to the Project page in the Portal, so the progress bar, progress updates and the Activity Stream are updated.
 
-The project should now be up and running, but both Staging and Live will be empty so the owner will have to deploy from Development to Staging and then from Staging to Live. This will push (and deploy of course) the content of the git repository to the other environments and everything will be up to date, and the Baseline “slave” project is ready for business.
+The project should now be up and running, but both Staging and Live will be empty so the owner will have to deploy from Development to Staging and then from Staging to Live. This will push (and deploy of course) the content of the git repository to the other environments and everything will be up to date, and the Baseline “child” project is ready for business.
 
 ##Updating a Baseline "Slave" 
 When a project has one or more Baseline “slaves” it will appear on the Project page, and the user can click to get an overview of all the (Baseline) projects based on the current project.
