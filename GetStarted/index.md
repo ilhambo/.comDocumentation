@@ -31,5 +31,5 @@ From your site’s Project page select the *Go To Backoffice* link to login to t
 This is where you get to make your Umbraco site your own.  Umbraco is built using web standards - things like Html, css, and JavaScript.  You’ll find the Html that makes up the Templates for your site in the Umbraco back office Settings section, under the Templates tree.  This is plain-old-html, so feel free to change or replace what’s there.  The same goes for your site’s Css (it’s in the Stylesheets tree) and the JavaScript (yup, in the Scripts tree).  
 
 ##Starting with a Baseline
-Beyond the basics of creating a new project, you may wish to start with a Baseline project.  Read more about Baselines and how they work [Baseline Projects](baseline.md).
+Beyond the basics of creating a new project, you may wish to start with a Baseline project.  Read more about Baselines and how they work [Baseline Projects](baselines.md).
  
