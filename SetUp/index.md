@@ -7,6 +7,7 @@ Most of the set up can be accomplished by using the options from your project's 
 
 ##Other Set Up Topics
 - [Working with your site locally](working-local.md)
+- [Setting up users](users.md)
 - [Working with Visual Studio](visualstudio.md)
 - [Additional media topics](media.md)
 
