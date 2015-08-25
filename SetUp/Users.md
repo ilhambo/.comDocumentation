@@ -15,5 +15,5 @@ In summary, currently:
 * Admin, Write, Read permissions will give you an Umbraco Admin user in the backoffice. 
 
 In the future:
-*Admin users will give you an Admin user in the Umbraco backoffice as well (with access to all sections)
-*Users with Write and Read will give you an Editor user in the Umbraco backoffice with access to Content, Media, Forms and Member sections
+* Admin users will give you an Admin user in the Umbraco backoffice as well (with access to all sections)
+* Users with Write and Read will give you an Editor user in the Umbraco backoffice with access to Content, Media, Forms and Member sections
