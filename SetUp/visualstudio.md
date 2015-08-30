@@ -15,9 +15,9 @@ In Visual Studio create a new project, selecting the Empty Web Application optio
 If you haven't already, clone your development site to your local machine.  Make sure you've also restored your content from your umbraco.io site, which will create the local database you'll need to run your site locally.  See the [Working Local documentation](working-local.md) for details on how to do this if you haven't alredy.
 
 - Copy your site files and folders into the project folder you just created
--   * Include the /.git folder
+  * Include the /.git folder
 - Check the *Show all files* option in Visual Studio
-- Include all folders and files your project reqires to function when deployed and save.  _Note:_ not all folders should be addded to the project as with any other Umbraco project you generally will include:
+- Include all folders and files your project reqires to function when deployed and save.  _Note:_ not all folders should be addded to the project, as with any other Umbraco project you generally will include:
   * /App_Code
   * /App_Plugins
   * /Config
@@ -25,7 +25,7 @@ If you haven't already, clone your development site to your local machine.  Make
   * /js
   * /Scripts
   * /Views
-  * and any additional folders that contain files your site will need in order to fully function
+  * ...and any additional folders that contain files your site will need in order to fully function
 
 ##Update .gitignore
 You may need to add a few entries to your .gitignore file so they are not deployed to your umbraco.io site.  For example, you can add these to your .gitignore file (you may have more to add as well):
