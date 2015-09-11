@@ -36,7 +36,7 @@ On rare occasions you may find that a deployment fails and there is no useful in
 The first step is to find out what state the site’s Git repository is in (for the source site, usually dev but could also be stage).  In order to do this we’ll use the Kudu console that is available for every site in umbraco.com.  Here are the steps to find out what state your repository is in:
 
 1. Copy the Url from your site’s HTTPS Clone Url in the portal
-2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.umbraco.io/`
+2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.s1.umbraco.io/`
 3. You’ll see the Kudu site, which includes your site’s Git repository
 4. From the menu select Debug Console > Powershell
 5. In the file explorer navigate to site > repository
@@ -66,7 +66,7 @@ If there's something wrong with you site that you can't directly see the cause o
 ###Second - Other logs 
 These can all be accessed through Kudu:
 1. Copy the Url from your site’s HTTPS Clone Url in the portal
-2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.umbraco.io/`
+2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.s1.umbraco.io/`
 3. You’ll see the Kudu site, which includes your site’s Git repository
 4. From the menu select Debug Console > Powershell
 5. In the file explorer navigate to site
@@ -81,3 +81,5 @@ When you're in Kudu, you can go up to your `site` folder as described in the 5 s
 - `status.xml` shows you detailed information of which commit was deployed to the `wwwroot` folder
 - `manifest` is used to track which files are in the currently active deploy so that additions, renames and deletions can be detected easily for the next deploy (this is an internal file which you should not touch)
 - `log.xml` shows you the same output you will have seen when pushing your changes using git, it will show you what happened during the push and if any errors occurred. This file is especially useful when trying to find errors for deploys using the portal (so from dev > live or from dev > staging > live). Even though the last line may end with "Deployment successful" it is possible that there were errors or suspicious messages before that so make sure to give them a read.
+
+It is possible that a deployment failed so that it is not the active deployment at the moment, there could be valueable information in the logs of this deployment. You can find out what the last attempted deploy was by going to your Kudu url and adding `/api/deployments` to the url (so for example: `https://stage-mysite.scm.s1.umbraco.io/api/deployments`. This will give you some JSON data and the first entry in here is the newest attempted deploy, again the id corresponds to a folder name which has the log.xml file in it.
