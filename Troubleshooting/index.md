@@ -60,10 +60,10 @@ The first step is to find out what state the site’s Git repository is in (for 
 ##Logfiles
 Still nothing? Time to check the logs, of which there are several. Remember that the timestamps in all logs are in UTC so they might be a few or many hours off from the time your actual problem occcurred. 
 
-###First Umbraco Logs
+###First - Umbraco Logs
 If there's something wrong with you site that you can't directly see the cause of, check the logs for Umbraco first. In your backoffice you can go to the Developer section and open up the "Trace Logs" tree. From there you can pick the date on which you're seeing problems and peruse the logs for suspicious entries.
 
-###Second Other logs 
+###Second - Other logs 
 These can all be accessed through Kudu:
 1. Copy the Url from your site’s HTTPS Clone Url in the portal
 2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.umbraco.io/`
