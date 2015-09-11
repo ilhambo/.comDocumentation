@@ -38,7 +38,7 @@ POST_DEPLOYMENT_ACTIONS_DIR = C:\KuduService\artifacts\
 So the addition here is the line that says `SCM_SCRIPT_GENERATOR_ARGS = --basic`.   
 Rest assured: this problem is on our list to fix as soon as possible but for now you can use this workaround.
 
-###I have an error saying `User: _username_ could not be authenticated at...`
+###I have an error saying `User: username@domain.net could not be authenticated at...`
 This usually mean that the user's account does not have the same user name and password on the environment you're deploying to. So when that user is deploying from development to staging they will get this error if they either don't exist on the staging environment or if their password is different between the dev and staging environment.
 
 ###My deployment did not complete successfully.  How do I find what went wrong and what needs to change?
