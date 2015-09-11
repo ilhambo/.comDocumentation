@@ -28,6 +28,16 @@ Probably not!  In most cases simply including the custom files (and configuratio
 ###I press the “Deploy to Staging/Live” button, then nothing happens.  What’s going on?
 Umbraco.com uses web sockets to communicate between your browser session and the remote environment.  If your connection to the internet doesn’t support web sockets, you are behind a proxy server or firewall that blocks web sockets, or if the web socket connection is in any other way not supported then you may find that deployments (and other operations) may not complete successfully.  At this time there is not a workaround to this requirement.
 
+###I have a packages.json file in the root of my website and my deploys keep failing
+With the packages.json file in place, our service will take that to mean: "look, I'm a node.js project, don't treat me as a ASP.NET site!". In order to remedy this you can go into your local clone of the website and find the `.deployment` file and make it look like this: 
+```
+[config]
+SCM_SCRIPT_GENERATOR_ARGS = --basic
+POST_DEPLOYMENT_ACTIONS_DIR = C:\KuduService\artifacts\
+```
+So the addition here is the line that says `SCM_SCRIPT_GENERATOR_ARGS = --basic`.   
+Rest assured: this problem is on our list to fix as soon as possible but for now you can use this workaround.
+
 ###My deployment did not complete successfully.  How do I find what went wrong and what needs to change?
 On rare occasions you may find that a deployment fails and there is no useful information in the error message.  In most cases you should try the deployment a second time, but if that also fails you will need to dig a little deeper.
 
