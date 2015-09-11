@@ -28,8 +28,8 @@ Probably not!  In most cases simply including the custom files (and configuratio
 ###I press the “Deploy to Staging/Live” button, then nothing happens.  What’s going on?
 Umbraco.com uses web sockets to communicate between your browser session and the remote environment.  If your connection to the internet doesn’t support web sockets, you are behind a proxy server or firewall that blocks web sockets, or if the web socket connection is in any other way not supported then you may find that deployments (and other operations) may not complete successfully.  At this time there is not a workaround to this requirement.
 
-###I have a packages.json file in the root of my website and my deploys keep failing
-With the packages.json file in place, our service will take that to mean: "look, I'm a node.js project, don't treat me as a ASP.NET site!". In order to remedy this you can go into your local clone of the website and find the `.deployment` file and make it look like this: 
+###I have a package.json file in the root of my website and my deploys keep failing
+With the package.json file in place, our service will take that to mean: "look, I'm a node.js project, don't treat me as a ASP.NET site!". In order to remedy this you can go into your local clone of the website and find the `.deployment` file and make it look like this: 
 ```
 [config]
 SCM_SCRIPT_GENERATOR_ARGS = --basic
