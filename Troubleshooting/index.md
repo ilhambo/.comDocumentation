@@ -38,6 +38,9 @@ POST_DEPLOYMENT_ACTIONS_DIR = C:\KuduService\artifacts\
 So the addition here is the line that says `SCM_SCRIPT_GENERATOR_ARGS = --basic`.   
 Rest assured: this problem is on our list to fix as soon as possible but for now you can use this workaround.
 
+###I have an error saying `User: _username_ could not be authenticated at...`
+This usually mean that the user's account does not have the same user name and password on the environment you're deploying to. So when that user is deploying from development to staging they will get this error if they either don't exist on the staging environment or if their password is different between the dev and staging environment.
+
 ###My deployment did not complete successfully.  How do I find what went wrong and what needs to change?
 On rare occasions you may find that a deployment fails and there is no useful information in the error message.  In most cases you should try the deployment a second time, but if that also fails you will need to dig a little deeper.
 
