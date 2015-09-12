@@ -1,7 +1,7 @@
-#Working with a local clone of an umbraco.com site
-To work with a local copy of your site you'll need to use Windows and have a local web server installed (like WebMatrix).  If you're not using Windows you can still work with your site's files (Templates, Css, JS, etc...) but you'll need to deploy these to your development site before you can "see" your updates.  If you are using Windows, read on for how to work locally.
+#Working with a local clone of an Umbraco as a Service site
+To work with a local copy of your site you'll need to use Windows and have a local web server installed (like WebMatrix). If you're not using Windows you can still work with your site's files (Templates, Css, JS, etc...) but you'll need to deploy these to your development site before you can "see" your updates. If you are using Windows, read on for how to work locally.
 
-From the umbraco.com portal copy your development site’s git repository endpoint using the *Get Clone Url* and then clone the site using your favorite Git client.  We like [SourceTree](http://www.sourcetreeapp.com/) or [Git Extensions](http://code.google.com/p/gitextensions/).  We'll use SourceTree in this example.  Here are the steps to clone your site:
+From the Umbraco as a Service portal copy your development site’s git repository endpoint using the *Get Clone Url* and then clone the site using your favorite Git client. We like [SourceTree](http://www.sourcetreeapp.com/) or [Git Extensions](http://code.google.com/p/gitextensions/). We'll use SourceTree in this example. Here are the steps to clone your site:
 
 1. Copy the Clone Url from the portal for your dev site
 ![clone dialog](images/GetCloneUrl.PNG)
@@ -11,12 +11,12 @@ From the umbraco.com portal copy your development site’s git repository endpoi
 4. You’ll be prompted to log in, use the same credentials as you use for the portal
 5. Click Clone
 
-Now you have an exact copy of your umbraco.com dev site locally.  
+Now you have an exact copy of your Umbraco as a Service dev site locally.
 
-We like to use Microsoft WebMatrix when working locally, but you can use Visual Studio or another development tool or web server of course.  When you run your local site for the first time you’ll be prompted to restore your site's content.  Wait until this process completes as it also creates the local SqlCE database for your site.
+We like to use Microsoft WebMatrix when working locally, but you can use Visual Studio or another development tool or web server of course. When you run your local site for the first time you’ll be prompted to restore your site's content. Wait until this process completes as it also creates the local SqlCE database for your site.
 
 ![clone dialog](images/RestoreContent.PNG)
 
-That's it!  Now you can work with your site locally just as with any other umbraco site.  You can create content, add media, even create your own custom code.  When you're ready to deploy your changes make sure to have a look at the [deployments](/Deployment/index.md) documentation.
+That's it! Now you can work with your site locally just as with any other umbraco site. You can create content, add media, even create your own custom code. When you're ready to deploy your changes make sure to have a look at the [deployments](/Deployment/index.md) documentation.
 
-Note:  If you have more than "a few" media items see our recommendations for working with [media in umbraco.com](media.md).  
+Note: If you have more than "a few" media items see our recommendations for working with [media in umbraco.com](media.md).

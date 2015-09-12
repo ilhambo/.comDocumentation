@@ -12,7 +12,7 @@ The outcome of the update will result in one of three statuses “Updated has co
 A merge conflict is something you currently need to handle manually in order to push future updates to the child project, which encountered a merge conflict upon updating.
 ![environment](images/image00.png)
 
-In order to resolve the conflict you need to open up the SCM / Kudu site for the development environment. Click the “[link]” (see screenshot above) for the project (see screenshot above) and find clone url for the development site, which is similar to this: https://dev-my-website-alias.scm.umbraco.io/c565ead8-7a27-4696-9ab4-dad7eba2cd2c.git and remove everything after the last slash, so you have a url that looks like this: https://dev-my-website-alias.scm.umbraco.io
+In order to resolve the conflict you need to open up the SCM / Kudu site for the development environment. Click the “[link]” (see screenshot above) for the project (see screenshot above) and find clone url for the development site, which is similar to this: `https://dev-my-website-alias.scm.umbraco.io/c565ead8-7a27-4696-9ab4-dad7eba2cd2c.git` and remove everything after the last slash, so you have a url that looks like this: `https://dev-my-website-alias.scm.umbraco.io`
 ![environment](images/GetCloneUrl.PNG)
 
 You will be prompted to login to the SCM / Kudu site - use the credentials you normally use to login to the Umbraco as a service portal.
@@ -20,7 +20,7 @@ Now click “Debug console” from the top menu and select “CMD”. This will 
 ![environment](images/image03.png)
 
 From here you need to merge the branch (upstream/master), which contains the updates which were fetched from the Baseline project.
-In the console enter: 
+In the console enter:
 > git merge upstream/master
 
 This will result in an output showing the files, which contains conflicts that you need to resolve in order to fully merge the two branches:
@@ -29,7 +29,7 @@ Auto-merging data/Revision/properties/77279e39-ed1f-428a-ad7e-258db5f9e6ee.couri
 CONFLICT (content): Merge conflict in data/Revision/properties/77279e39-ed1f-428a-ad7e-258db5f9e6ee.courier
 Auto-merging data/Revision/documents/77279e39-ed1f-428a-ad7e-258db5f9e6ee.courier
 CONFLICT (content): Merge conflict in data/Revision/documents/77279e39-ed1f-428a-ad7e-258db5f9e6ee.courier
-Automatic merge failed; fix conflicts and then commit the result. 
+Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 In the above output two files are listed and we want to pick the ones that comes from the current project (the child) - in other words we want to keep our files, as these are content changes. We use the following commands to achieve that:
@@ -52,6 +52,4 @@ You can use the following command from the Kudu Debug Console to deploy the late
 
 > curl https://dev-my-website-alias.scm.umbraco.io/api/deployments -X PUT -H "Content-Type: Application/json" --data "{ }" --user yourusername
 
-If you prefer to use the Kudu REST API for triggering a deployment, you can find the details here: https://github.com/projectkudu/kudu/wiki/REST-API#deployment 
-
-
+If you prefer to use the Kudu REST API for triggering a deployment, you can find the details here: https://github.com/projectkudu/kudu/wiki/REST-API#deployment
