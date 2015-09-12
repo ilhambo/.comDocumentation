@@ -10,26 +10,26 @@ As a first step, before you launch into any of the below you should check to see
 ###Second
 Next, assuming your deployment is complete and the message from the deployment indicates it did not complete successfully, you can try to deploy a second time.  This might work if you have items that depend on other items that will now be in place.
 
-##I didn’t start out by cloning the umbraco.com site or something else is different from the approach outlined in Getting Started and Deployment
+##I didn’t start out by cloning the Umbraco as a Service site or something else is different from the approach outlined in Getting Started and Deployment
 
-In some cases you may have some special datatypes or may have created custom code outside of the umbraco.com site.  In these cases you’ll need to take a few extra steps to ensure your site is deployed successfully.  Read on to see if any of these apply to you.
+In some cases you may have some special datatypes or may have created custom code outside of the Umbraco as a Service site.  In these cases you’ll need to take a few extra steps to ensure your site is deployed successfully.  Read on to see if any of these apply to you.
 
-###I already have my site created as a standalone site/solution, how do I deploy my changes to umbraco.com?
-There are different approaches to this scenario.  The one you’ll use depends on how you created your site.  In most cases, copying your production ready files (including any compiled code you have) into a local clone of your site will be all you need.  Of course, if you have created Umbraco specific items (document types, etc...) in a site that was not originally cloned from umbraco.com, then you’ll also need to update those items.  The most straightforward way is to create the items in the cloned site, but you may also do a database merge, file import, or other method that you are familiar with.  
+###I already have my site created as a standalone site/solution, how do I deploy my changes to Umbraco as a Service?
+There are different approaches to this scenario.  The one you’ll use depends on how you created your site.  In most cases, copying your production ready files (including any compiled code you have) into a local clone of your site will be all you need.  Of course, if you have created Umbraco specific items (document types, etc...) in a site that was not originally cloned from Umbraco as a Service, then you’ll also need to update those items.  The most straightforward way is to create the items in the cloned site, but you may also do a database merge, file import, or other method that you are familiar with.  
 In any case, the idea is to tell the cloned umbraco site about all your items so umbraco can create the serialized version of these.
-Once you have your local site as you like, then the process to deploy to your umbraco.com dev site is identical to the above.  Pretty simple!
+Once you have your local site as you like, then the process to deploy to your Umbraco as a Service dev site is identical to the above.  Pretty simple!
 
 ###I’m using Archetype, do I need to do anything special?
 Yes, as Archetype is third-party created datatype you’ll need to include the appropriate data resolver.  You simply include the data resolver in your site’s /bin/ folder and make sure you commit and push the file when you deploy your site.  You can find the data resolver for Archetype here:  [https://github.com/leekelleher/Archetype.Courier](https://github.com/leekelleher/Archetype.Courier)
 
 ###I’m using BuzzHybrid / DonutCaching / LatestHotStuff / other custom add-ins or I’ve created my own datatypes - do I need to do anything special?
-Probably not!  In most cases simply including the custom files (and configuration) is enough for umbraco.com to understand how to deploy your site.  In some cases, namely where you’ve created a data type that serializes data or otherwise stores property data in a non-standard format, you’ll need to also create a corresponding data resolver.  Fortunately these are easily created using the guide and samples [here](https://github.com/umbraco/Courier/blob/master/Documentation/Developer%20Documentation/Data%20Resolvers.md)
+Probably not!  In most cases simply including the custom files (and configuration) is enough for Umbraco as a Service to understand how to deploy your site.  In some cases, namely where you’ve created a data type that serializes data or otherwise stores property data in a non-standard format, you’ll need to also create a corresponding data resolver.  Fortunately these are easily created using the guide and samples [here](https://github.com/umbraco/Courier/blob/master/Documentation/Developer%20Documentation/Data%20Resolvers.md)
 
 ###I press the “Deploy to Staging/Live” button, then nothing happens.  What’s going on?
-Umbraco.com uses web sockets to communicate between your browser session and the remote environment.  If your connection to the internet doesn’t support web sockets, you are behind a proxy server or firewall that blocks web sockets, or if the web socket connection is in any other way not supported then you may find that deployments (and other operations) may not complete successfully.  At this time there is not a workaround to this requirement.
+Umbraco as a Service uses web sockets to communicate between your browser session and the remote environment.  If your connection to the internet doesn’t support web sockets, you are behind a proxy server or firewall that blocks web sockets, or if the web socket connection is in any other way not supported then you may find that deployments (and other operations) may not complete successfully.  At this time there is not a workaround to this requirement.
 
 ###I have a package.json file in the root of my website and my deploys keep failing
-With the package.json file in place, our service will take that to mean: "look, I'm a node.js project, don't treat me as a ASP.NET site!". In order to remedy this you can go into your local clone of the website and find the `.deployment` file and make it look like this: 
+With the package.json file in place, our service will take that to mean: "look, I'm a node.js project, don't treat me as a ASP.NET site!". In order to remedy this you can go into your local clone of the website and find the `.deployment` file and make it look like this:
 ```
 [config]
 SCM_SCRIPT_GENERATOR_ARGS = --basic
@@ -46,7 +46,7 @@ On rare occasions you may find that a deployment fails and there is no useful in
 
 ####It’s time to get your Git on!  
 
-The first step is to find out what state the site’s Git repository is in (for the source site, usually dev but could also be stage).  In order to do this we’ll use the Kudu console that is available for every site in umbraco.com.  Here are the steps to find out what state your repository is in:
+The first step is to find out what state the site’s Git repository is in (for the source site, usually dev but could also be stage).  In order to do this we’ll use the Kudu console that is available for every site in Umbraco as a Service.  Here are the steps to find out what state your repository is in:
 
 1. Copy the Url from your site’s HTTPS Clone Url in the portal
 2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.s1.umbraco.io/`
@@ -54,29 +54,29 @@ The first step is to find out what state the site’s Git repository is in (for 
 4. From the menu select Debug Console > Powershell
 5. In the file explorer navigate to site > repository
 6. Now in the Powershell console enter
-  * PS> git status 
-7. The status of your repository will be displayed.  If you see output similar to the following, you’re getting somewhere:
-  *. # On branch master  # Your branch and 'origin/master' have diverged
+  `PS> git status`
+7. The status of your repository will be displayed. If you see output similar to the following, you’re getting somewhere:
+  `. # On branch master  # Your branch and 'origin/master' have diverged`
 8. Now you just need to resolve any merge conflicts and commit any outstanding unmerged paths.  In most cases, you can use the following Git command to commit the outstanding paths (it may take a minute or two for Git to process the commit):
-  *. PS> git commit -m “Latest merged files here”
+  `PS> git commit -m “Latest merged files here”`
 9. If the git commit didn’t work for you, you’ll need to go even a little deeper.  There are a few options here; 1) if the files marked as “Unmerged paths” have a name like ‘03dbdfb1-7780-4368-8f1e-2bc2a18012ec.courier’ you can remove them using the git command:
-  1. PS> git rm <full path from console>/03dbdfb1-8f1e-2bc2a18012ec.courier
+`PS> git rm <full path from console>/03dbdfb1-8f1e-2bc2a18012ec.courier`
 10. And 2) If the files listed in “Unmerged paths” are files your site is using, you’ll need to manually edit these files to resolve the merge conflict and then add the back to your repository using the git command:
-  * PS> git add myfilename
+  `PS> git add myfilename`
 11. Once you have resolved any conflicts you need to commit any outstanding changes:
-  * PS> git commit -m “Manually resolved merge conflicts, yay!”
+  `PS> git commit -m “Manually resolved merge conflicts, yay!”``
 12. Now check the status of the repository to make sure it’s clean:
-  * PS> git status
+  `PS> git status`
 13. Whew!  Just imagine having to do this without Git!
-14. Now you can return to the umbraco.com portal and again deploy your site
+14. Now you can return to the Umbraco as a Service portal and again deploy your site
 
 ##Logfiles
-Still nothing? Time to check the logs, of which there are several. Remember that the timestamps in all logs are in UTC so they might be a few or many hours off from the time your actual problem occcurred. 
+Still nothing? Time to check the logs, of which there are several. Remember that the timestamps in all logs are in UTC so they might be a few or many hours off from the time your actual problem occcurred.
 
 ###First - Umbraco Logs
 If there's something wrong with you site that you can't directly see the cause of, check the logs for Umbraco first. In your backoffice you can go to the Developer section and open up the "Trace Logs" tree. From there you can pick the date on which you're seeing problems and peruse the logs for suspicious entries.
 
-###Second - Other logs 
+###Second - Other logs
 These can all be accessed through Kudu:
 1. Copy the Url from your site’s HTTPS Clone Url in the portal
 2. Using the Url without the actual repository name, the GUID part, open a new browser tab and login.  Just the Url like `https://stage-mysite.scm.s1.umbraco.io/`

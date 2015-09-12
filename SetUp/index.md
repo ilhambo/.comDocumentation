@@ -32,16 +32,20 @@ One approach for this is to add a redirect to your live site's web.config and to
 
 1. Add a redirect rule to the live site's web.config in the <system.webServer><httpRedirect> section. For example, the following rule will redirect all requests for the site's mysite.umbraco.io Url to the mysite.com Url and respond with a permanent redirect status.
 
-        <add name="theoneurlredirect"
-        redirect="Domain"
-        ignoreCase="true" rewriteUrlParameter="IncludeQueryStringForRewrite"
-        virtualUrl="https{0,1}://<your site name here>.umbraco.io/(.*)"
-        redirectMode="Permanent"
-        destinationUrl="http://<your actual domain here>.com/$1" />
+```xml
+<add name="theoneurlredirect"
+redirect="Domain"
+ignoreCase="true" rewriteUrlParameter="IncludeQueryStringForRewrite"
+virtualUrl="https{0,1}://<your site name here>.umbraco.io/(.*)"
+redirectMode="Permanent"
+destinationUrl="http://<your actual domain here>.com/$1" />
+```
 
 2. Update the /Config/UmbracoDeploy.config entry in your staging site to use the updated Url for deployments. Note that you can make this update in your local clone or your umbraco.io development site then deploy it using the Portal to staging. For example, the updated entry would be as follows.
 
-        environment type="live" name="Live">http://mydomain.com</environment>
+```xml
+<environment type="live" name="Live">http://mydomain.com</environment>
+```
 
 ##SSL Certificates
 You can apply SSL certificates to your live site by uploading them from the Manage Domains page. Your certificates need to be .pfx format and must be set to use a password. Each certificate can then be bound to a hostname you have already added to your site. Make certain you use the hostname you will bind the certificate to as the common name (CN) when generating the certificate.

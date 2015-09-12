@@ -19,4 +19,4 @@ We like to use Microsoft WebMatrix when working locally, but you can use Visual 
 
 That's it! Now you can work with your site locally just as with any other umbraco site. You can create content, add media, even create your own custom code. When you're ready to deploy your changes make sure to have a look at the [deployments](/Deployment/index.md) documentation.
 
-Note: If you have more than "a few" media items see our recommendations for working with [media in umbraco.com](media.md).
+Note: If you have more than "a few" media items see our recommendations for working with [media in Umbraco as a Service](media.md).

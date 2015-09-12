@@ -24,6 +24,7 @@ In the console enter:
 > git merge upstream/master
 
 This will result in an output showing the files, which contains conflicts that you need to resolve in order to fully merge the two branches:
+
 ```
 Auto-merging data/Revision/properties/77279e39-ed1f-428a-ad7e-258db5f9e6ee.courier
 CONFLICT (content): Merge conflict in data/Revision/properties/77279e39-ed1f-428a-ad7e-258db5f9e6ee.courier
