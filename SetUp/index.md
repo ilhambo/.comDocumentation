@@ -1,15 +1,15 @@
 #Set Up
-Now that you've created a project there are a few things you may want to do to make working with your project easier. As you get ready to lauch your live site there are some other considerations to take into account as well.
+Now that you've created a project there are a few things you may want to do to make working with your project easier. As you get ready to launch your live site there are some other considerations to take into account as well.
 
 Most of the set up can be accomplished by using the options from your project's Settings drop down. Some of the setup applies to all of your projects, so you'll make these updates from your profile section.
 
-![settings](images/settings.PNG)
+![settings](images/settings.png)
 
 ##Other Set Up Topics
-- [Working with your site locally](working-local.md)
-- [Setting up users](Users.md)
-- [Working with Visual Studio](visualstudio.md)
-- [Additional media topics](media.md)
+####[Working with your site locally](working-local.md)
+####[Setting up users](Users.md)
+####[Working with Visual Studio](visualstudio.md)
+####[Additional media topics](media.md)
 
 
 ##Naming a Project
@@ -32,20 +32,16 @@ One approach for this is to add a redirect to your live site's web.config and to
 
 1. Add a redirect rule to the live site's web.config in the <system.webServer><httpRedirect> section. For example, the following rule will redirect all requests for the site's mysite.umbraco.io Url to the mysite.com Url and respond with a permanent redirect status.
 
-```xml
-<add name="theoneurlredirect"
-redirect="Domain"
-ignoreCase="true" rewriteUrlParameter="IncludeQueryStringForRewrite"
-virtualUrl="https{0,1}://<your site name here>.umbraco.io/(.*)"
-redirectMode="Permanent"
-destinationUrl="http://<your actual domain here>.com/$1" />
-```
+        <add name="theoneurlredirect"
+        redirect="Domain"
+        ignoreCase="true" rewriteUrlParameter="IncludeQueryStringForRewrite"
+        virtualUrl="https{0,1}://<your site name here>.umbraco.io/(.*)"
+        redirectMode="Permanent"
+        destinationUrl="http://<your actual domain here>.com/$1" />
 
 2. Update the /Config/UmbracoDeploy.config entry in your staging site to use the updated Url for deployments. Note that you can make this update in your local clone or your umbraco.io development site then deploy it using the Portal to staging. For example, the updated entry would be as follows.
 
-```xml
-<environment type="live" name="Live">http://mydomain.com</environment>
-```
+        <environment type="live" name="Live">http://mydomain.com</environment>
 
 ##SSL Certificates
 You can apply SSL certificates to your live site by uploading them from the Manage Domains page. Your certificates need to be .pfx format and must be set to use a password. Each certificate can then be bound to a hostname you have already added to your site. Make certain you use the hostname you will bind the certificate to as the common name (CN) when generating the certificate.
@@ -59,7 +55,7 @@ As with all things security related, make sure you use this feature judiciously 
 ##Timezones
 From your profile settings you can set your timezone. This applies to the disply of status messages in the Umbraco as a Service portal and makes it easier to determine the actual time a particular status was created.
 
-![timezones](images/timezones.PNG)
+![timezones](images/timezones.png)
 
 ##Experimental Features
 You can enable the availability of experimental features for your projects. This includes features that may not be functionaly complete and are not supported by Umbraco HQ. We recommend enabling this only if you fully understand the feature you will be using or are strictly using the project as a test.

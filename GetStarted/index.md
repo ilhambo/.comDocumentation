@@ -9,18 +9,18 @@ In Umbraco as a Service we organize your work into projects which are made of si
 
 ![environment](images/environment.png)
 
-For developers, you will use the development site to create and test your code.  You may even clone the development site to your local machine to work there and then, once things are just how you like, deploy your changes to the development site.  See more about this in the [deployment section](/Deployment/index.md).
+For developers, you will use the development site to create and test your code.  You may even clone the development site to your local machine to work there and then, once things are just how you like, deploy your changes to the development site.  See more about this in the [deployment section](../Deployment/index.md).
 
 For content editors, you will either use the staging site or the live site to create and edit your content.  If you author your content in your staging site you'll also deploy this content to your live site.  And developers can always restore to the latest content in the development or local sites.
 
 ##Finding your Umbraco Project
 To navigate to your site, simply log in to the Umbraco as a Service portal and then click on Projects then the project you want to use.
 
-![dashboard](images/Dashboard.PNG)
+![dashboard](images/dashboard.png)
 
-We create your site’s Url using the name you used when you created the site, then we add _umbraco.io_.  So your site’s Url will look something like _snoopy.umbraco.io_ and your site’s Umbraco back office Url will look something like _snoopy.umbraco.io/umbraco_.  You'll find all sites for a project listed on the Project page.
+We create your site’s Url using the name you used when you created the site, then we add _umbraco.io_.  So your site’s Url will look something like _snoopy.umbraco.io_ and your site’s Umbraco back office Url will look something like _snoopy.umbraco.io/umbraco_. You'll find all sites for a project listed on the Project page.
 
-![project](images/Project.PNG)
+![project](images/project.png)
 
 ##Logging in to Umbraco
 With the Trial version of Umbraco as a Service you need to log in to work with the Umbraco back office and also to view your site. The user name and password for both locations are the same as the user name and password you use for the portal. Once you upgrade to any of the non-Trial versions you’ll no longer need to login to view your live site but, of course, will still need to log in to the back office.

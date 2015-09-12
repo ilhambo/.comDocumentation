@@ -9,33 +9,31 @@ While you will commit all code except compiled dll's to your source code reposit
 ##Create a new project
 In Visual Studio create a new project, selecting the Empty Web Application option. If you will be extending Umbraco with your own MVC code (SurfaceControllers, etc.) you can start with the MVC 4 Web Application project type. Note that you'll need to remove some files if you start with this type of project.
 
-![visualstudio](images/filenewproject.PNG)
+![visualstudio](images/filenewproject.png)
 
 ##Add Your site files
 If you haven't already, clone your development site to your local machine. Make sure you've also restored your content from your Umbraco as a Service site, which will create the local database you'll need to run your site locally. See the [Working Local documentation](working-local.md) for details on how to do this if you haven't already.
 
 - Copy your site files and folders into the project folder you just created
- * Include the /.git folder
+    * Include the /.git folder
 - Check the *Show all files* option in Visual Studio
 - Include all folders and files your project requires to function when deployed and save. _Note:_ not all folders should be added to the project, as with any other Umbraco project you generally will include:
- * /App_Code
- * /App_Plugins
- * /Config
- * /css
- * /js
- * /Scripts
- * /Views
- * ...and any additional folders that contain files your site will need in order to fully function
+    * /App_Code
+    * /App_Plugins
+    * /Config
+    * /css
+    * /js
+    * /Scripts
+    * /Views
+    * ...and any additional folders that contain files your site will need in order to fully function
 
 ##Update .gitignore
 You may need to add a few entries to your .gitignore file so they are not deployed to your Umbraco as a Service site. For example, you can add these to your .gitignore file (you may have more to add as well):
 
-```
-Properties/
-Web.Debug.config
-Web.Release.config
-*.csproj
-```
+    Properties/
+    Web.Debug.config
+    Web.Release.config
+    *.csproj
 
 You should also exclude any folders that contain only source code. Folders such as /Controllers or /Models and any custom code you have are good examples. You should not add the /.git folder if that is an option.
 

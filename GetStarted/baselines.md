@@ -14,6 +14,7 @@ When the Project is created the project's identity will be added to an index of 
 
 ###Steps
 The process of creating a Baseline project is rather involved, but it can be helpful to understand the parts that make up a baseline master-child relationship:
+
 * The Development site is created along with a new Sql Azure database
 * The Staging and Live sites are created with Sql Azure credentials, but no database as we’ll make a copy of the Development database when its ready. We’ll use these pre-defined credentials later on.
 * A ConnectionString is configured for each site (umbracoDbDsn)
