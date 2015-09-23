@@ -38,7 +38,7 @@ Between most of these steps we send updates to the Project page in the Portal, s
 
 The project should now be up and running, but both Staging and Live will be empty so the owner will have to deploy from Development to Staging and then from Staging to Live. This will push (and deploy of course) the content of the git repository to the other environments and everything will be up to date, and the Baseline “child” project is ready for business.
 
-##Updating a Baseline "CHild"
+##Updating a Baseline "Child"
 When a project has one or more Baseline “children” it will appear on the Project page, and the user can click to get an overview of all the (Baseline) projects based on the current project.
 Clicking "update" on the overview page will trigger the update of all the projects listed on that page.  Make sure this is what you intend to do as the process will do what it says - that is, push the current Master branch to all the configured children.
 
