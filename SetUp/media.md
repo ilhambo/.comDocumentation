@@ -21,8 +21,8 @@ At the time this documentation was updated (July 2015) there are a few items to 
 - Copy of document types with an upload field as a property will not work.
 
 ##Environment and Deployment considerations
-By default this provider will use a single blob container for the media used by all sites in a project. So development, staging, a live will all use the same media files. If this works with your workflow it is the recommended configuration. If you cannot use the same media accross all sites then you will need to set up a different blob storage container for each site. Each container will have a unique address and access keys.
+By default this provider will use a single blob container for the media used by all sites in a project. So development, staging, a live will all use the same media files. If this works with your workflow it is the recommended configuration. If you cannot use the same media across all environments then you will need to set up a different blob storage container for each environments. Each container will have a unique address and access keys.
 
-A common arrangement for Umbraco as a Service users who use the Azure Blob Storage provider and cannot use the same container for all sites is to create one container for development/stage and one for live. The specific container settings are then applied to development/stage sites and to the live site.
+A common arrangement for Umbraco as a Service users who use the Azure Blob Storage provider and cannot use the same container for all environments is to create one container for development/staging and one for live. The specific container settings are then applied to development/staging environments and to the live environment.
 
 When Umbraco as a Service deploys media it will use the settings for each environment to create or update the media in the correct container.

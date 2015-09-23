@@ -9,7 +9,7 @@ Prior to undertaking a migration you'll want to make sure you know the packages,
 If you have used Courier with your site previously and deployments work as expected, then you can be relatively certain it will also deploy properly with Umbraco as a Service.
 
 ##Step-by-step
-1. Make sure your existing site is upgraded to the latest released version of umbraco.  You'll also want to make sure the Umbraco as a Service site you create and clone in step 5 is the same version.
+1. Make sure your existing site is upgraded to the latest released version of umbraco. You can find detailed information about upgrading your site [here](https://our.umbraco.org/documentation/Getting-Started/Setup/Upgrading/). You'll also want to make sure the Umbraco as a Service site you create and clone in step 5 is the same version.
 2. Verify your site runs without errors.  
     * Hint: check the umbracoTraceLog.txt log file.
     * Ideally your site will run locally using the SqlCe database as this will make content migration easier. Don't worry if that's not possible, you can still complete the migration.

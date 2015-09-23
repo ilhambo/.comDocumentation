@@ -1,34 +1,38 @@
 #Welcome to Umbraco as a Service
 We're excited you have decided to use Umbraco as a Service!
 
-###What's up with the name Umbraco as a Service?
+##What's up with the name Umbraco as a Service?
 Since Umbraco as a Service _is_ Umbraco we thought we'd stick with a name that describes what it is. So there you go. We also like to call it just "UaaS".
 
-## Projects and Sites
-In Umbraco as a Service we organize your work into projects which are made of sites, teams, settings, and other related resources like databases and file storage. In a Trial project you have just one site with a team of one. But with an Agency project you have three sites (development, staging, live), a team of many, and other items.  But always you start with a project and then, depending on what you want to do, you'll use a site from that project.
+## Projects and Environments
+In Umbraco as a Service we organize your work into projects which are made of environments, teams, settings, and other related resources like databases and file storage. A project is usually contains two environments, _development_ and _live_. If needed an Agency project can contain an additional staging environment so the structure is _development_, _staging_ and _live_.
 
 ![environment](images/environment.png)
 
-For developers, you will use the development site to create and test your code.  You may even clone the development site to your local machine to work there and then, once things are just how you like, deploy your changes to the development site.  See more about this in the [deployment section](../Deployment/index.md).
+####Set up and Code
+For developers, you will use the development environment to set up the site. To create and test code, clone _development_ to your local machine and then, once things are just how you like, push the changes back to Umbraco as a Service. Your changes will be added to the _development_ environment automatically and added to the deployment queue. To deploy to _live_, simply push the deploy button and everything will be deployed to the _live_ environment. See more about this in the [deployment section](../Deployment/index.md).
 
-For content editors, you will either use the staging site or the live site to create and edit your content.  If you author your content in your staging site you'll also deploy this content to your live site.  And developers can always restore to the latest content in the development or local sites.
+####Content
+For content editors, you will use the live site to create and edit your content. Developers can always restore to the latest content in the development or local sites.
+
+If the project contains a _staging_ environment and you author your content here, be aware that content doesn't get added to the deployment queue automatically. Once you're ready to deploy the content to the _live_ environment, add it to the deployment queue using the __Queue for transfer__ feature in the backoffice.
 
 ##Finding your Umbraco Project
-To navigate to your site, simply log in to the Umbraco as a Service portal and then click on Projects then the project you want to use.
+To navigate to your project, simply log in to the Umbraco as a Service portal and then click on Projects then the project you want to use.
 
-![dashboard](images/dashboard.png)
+![dashboard](images/dashboard.jpg)
 
-We create your site’s Url using the name you used when you created the site, then we add _umbraco.io_.  So your site’s Url will look something like _snoopy.umbraco.io_ and your site’s Umbraco back office Url will look something like _snoopy.umbraco.io/umbraco_. You'll find all sites for a project listed on the Project page.
+We create your site’s Url using the name you used when you created the site, then we add _s1.umbraco.io_. If you named your project __Snoopy__, your site’s Url will be _snoopy.s1.umbraco.io_ and your site’s Umbraco back office Url will be _snoopy.s1.umbraco.io/umbraco_. For the development environment we prefix with _dev-_ so the the urls will be _dev-snoopy.s1.umbraco.io_ and _dev-snoopy.s1.umbraco.io/umbraco_. You'll find all environments for a project listed on the Project page.
 
-![project](images/project.png)
+![project](images/project.jpg)
 
 ##Logging in to Umbraco
-With the Trial version of Umbraco as a Service you need to log in to work with the Umbraco back office and also to view your site. The user name and password for both locations are the same as the user name and password you use for the portal. Once you upgrade to any of the non-Trial versions you’ll no longer need to login to view your live site but, of course, will still need to log in to the back office.
+When working with a trial project on Umbraco as a Service you need to log in to work with the Umbraco back office and also to view your site. The user name and password for both locations are the same as the user name and password you use for the portal. Once you upgrade to any of the non-Trial versions you’ll no longer need to login to view your live site but, of course, will still need to log in to the back office.
 
 From your site’s Project page select the *Go To Backoffice* link to login to the back office and the *View Page* link to view your site.
 
 ##Making changes to your site
-This is where you get to make your Umbraco site your own. Umbraco is built using web standards - things like Html, css, and JavaScript. You’ll find the Html that makes up the Templates for your site in the Umbraco back office Settings section, under the Templates tree. This is plain-old-html, so feel free to change or replace what’s there. The same goes for your site’s Css (it’s in the Stylesheets tree) and the JavaScript (yup, in the Scripts tree).
+This is where you get to make your Umbraco site your own. Umbraco is built using web standards - things like Html, css, and JavaScript. You’ll find the Html that makes up the Templates for your site in the Umbraco back office Settings section, under the Templates tree. This is plain-old-html, so feel free to change or replace what’s there. The same goes for your site’s Css (it’s in the Stylesheets tree) and the JavaScript (yup, in the Scripts tree). See the [Umbraco documentation](https://our.umbraco.org/documentation/Getting-Started/) for more information.
 
 ##Starting with a Baseline
-Beyond the basics of creating a new project, you may wish to start with a Baseline project. Read more about Baselines and how they work [Baseline Projects](baselines.md).
+Beyond the basics of creating a new project, you may wish to start with a Baseline project. Read more about Baselines and how to work with [Baseline Projects](baselines.md).
