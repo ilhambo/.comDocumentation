@@ -5,7 +5,7 @@ We're excited you have decided to use Umbraco as a Service!
 Since Umbraco as a Service _is_ Umbraco we thought we'd stick with a name that describes what it is. So there you go. We also like to call it just "UaaS".
 
 ## Projects and Environments
-In Umbraco as a Service we organize your work into projects which are made of environments, teams, settings, and other related resources like databases and file storage. A project is usually contains two environments, _development_ and _live_. If needed an Agency project can contain an additional staging environment so the structure is _development_, _staging_ and _live_.
+In Umbraco as a Service we organize your work into projects which are made of environments, teams, settings, and other related resources like databases and file storage. A project is comprised of two environments, _development_ and _live_. If needed a project based on the _Support_ plan can have an additional staging environment so the structure is _development_, _staging_ and _live_.
 
 ![environment](images/environment.png)
 
