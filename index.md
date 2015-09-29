@@ -1,3 +1,6 @@
+__!!! Important note:__ The documentation can now be viewed at [Our Umbraco](https://our.umbraco.org/documentation/Umbraco-as-a-Service/).
+As part of the move, the files have been added to the [UmbracoDocs](https://github.com/umbraco/UmbracoDocs) repository. Please refer to that for latest changes, updates and issues.
+
 #Umbraco as a Service documentation
 
 Documentation for Umbraco as a Service. How to get started, how to set up your Umbraco as a Service project for development, how to successfully deploy, and how to troubleshoot issues.
