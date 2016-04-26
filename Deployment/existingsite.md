@@ -23,7 +23,7 @@ If you have used Courier with your site previously and deployments work as expec
     * `/data/[*]`
 5. Create a new Umbraco as a Service project and clone the Dev site to your local machine.
 6. Verify the existing site and the cloned Umbraco as a Service site are the same umbraco version
-7. Copy all folders from the existing site to the Umbraco as a Service site making sure to leave all the files in the folders as the uUmbraco as a Service versions:
+7. Copy all folders from the existing site to the Umbraco as a Service site making sure to leave all the files in the folders as the Umbraco as a Service versions:
     * `/bin/`
     * `/data/backoffice/users/`
     * `/umbraco/`
