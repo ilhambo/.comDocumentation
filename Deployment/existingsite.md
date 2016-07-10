@@ -37,7 +37,7 @@ If you have used Courier with your site previously and deployments work as expec
     * If using a local Sql Server make sure the connection string in web.config is set correctly.
     * If you have a backoffice user that has the exact same email address as the user for Umbraco as a Service you will need to change that user's email address in the database at this time before deploying via the backoffice.
     * In the `/data/backoffice/users/` folder you will have user files that correspond to each user that has been created via the Umbraco as a Service portal.  To add any of these users to the site simply rename the files by removing the leading underscore.
-10. Open a command prompt, cd to the `/data/` folder and add a deploy marker by typing "echo > deploy".
+10. Open a command prompt, cd to the `/data/` folder and add a deploy marker by typing `echo > deploy`.
 11. Now run the local Umbraco as a Service site with the updated files and database. The deploy engine will start when the deploy marker is detected.  This will likely complete relatively quickly. This  adds the users created by Umbraco as a Service to your existing database.
 12. Once complete verify your site has all meta data, content, and media as expected.
 13. Delete the folder `/data/Revision/` from the file system.  
